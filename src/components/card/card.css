@@ -1,4 +1,39 @@
 .card_outer {
-    width: 500px;
+    width: 650px;
     align-items: center;
+    border-radius: 8px;
+    color: white;
+}
+
+.upper {
+    padding: 5%;
+    background-image: url(../../assets/cloud_bg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.lower {
+    padding: 5%;
+    background-color: #383b47;
+}
+
+.description {
+    font-size: larger;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+
+.p1 {
+    font-weight: bold;
+}
+
+.separator-left {
+    border-left: 1px solid white;
+    height: 100px;
+}
+
+.separator-right {
+    border-right: 1px solid white;
+    height: 100px;
 }

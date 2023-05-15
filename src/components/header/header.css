@@ -1,15 +1,15 @@
-.headerOuter{
+.headerOuter {
     padding-top: 5%;
 }
 
-.header{
+.header {
     display: flex;
     align-items: center;
     align-content: center;
     justify-content: center;
 }
 
-.appTitle{
+.appTitle {
     padding-left: 2%;
-    color:white;
+    color: white;
 }
