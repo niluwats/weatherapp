@@ -1,8 +1,8 @@
 .App {
   background-image: url('./assets/bg.png');
-  background-position: cover;
+  background-size: cover;
   background-color: #1e2027;
-  /* text-align: center; */
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* .App-header {
@@ -15,7 +15,3 @@
   font-size: calc(10px + 2vmin);
   color: white;
 } */
-
-
-
-
