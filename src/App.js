@@ -3,8 +3,9 @@ import "./App.css";
 import citiesJSON from "./assets/cities.json";
 import { getWeatherInfo } from "./services/getWeatherData";
 import Header from "./components/header/header";
-import AddCity from "./components/addcity/addCity";
-import Card from "./components/card/card";
+import { Route, Routes } from "react-router";
+import Dashboard from "./pages/dashboard/dashboard";
+import View from "./pages/view/view";
 
 function App() {
   const [cityCodes, setCityCodes] = useState([]);
@@ -28,8 +29,13 @@ function App() {
     weatherData.length > 0 && (
       <div className="App">
         <Header />
-        <AddCity />
-        <Card weatherData={weatherData[0]} />
+        <Routes>
+          <Route path="/" element={<Dashboard weatherData={weatherData} />} />
+          <Route
+            path="/view/:id"
+            element={<View weatherData={weatherData} />}
+          ></Route>
+        </Routes>
       </div>
     )
   );

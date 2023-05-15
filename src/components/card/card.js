@@ -1,6 +1,7 @@
 import "./card.css";
 import arrowIcon from "../../assets/arrowhead.png";
 import { formatDate, formatFullDate } from "../../utils/formatDate";
+import colorsJson from "../../assets/colors.json";
 
 export default function Card(props) {
   const {
@@ -19,17 +20,22 @@ export default function Card(props) {
     deg,
     description,
     icon,
-  } = props.weatherData;
+  } = props.data;
+  const id = props.id;
 
   const src = `http://openweathermap.org/img/w/${icon}.png`;
+  const colors = colorsJson.colours.map((color) => color);
 
   return (
-    <div className="bg-danger card_outer text-center">
+    <div
+      className="card_outer text-center"
+      style={{ backgroundColor: colors[id % colors.length] }}
+    >
       <div className="upper">
         <div className="row">
           <div className="col">
             <h3>
-              {city},{country}
+              {city}, {country}
             </h3>
             <p>{formatFullDate(timestamp)}</p>
           </div>
