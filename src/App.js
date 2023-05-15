@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import "./App.css";
+import citiesJSON from "./assets/cities.json";
+import { getWeatherInfo } from "./services/getWeatherData";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [cityCodes, setCityCodes] = useState([]);
+  const [weatherData, setWeatherData] = useState([]);
+
+  useEffect(() => {
+    setCityCodes(citiesJSON.List.map((i) => i.CityCode));
+  }, []);
+
+  useEffect(() => {
+    if (cityCodes.length > 0) {
+      async function fetchData() {
+        const result = await getWeatherInfo(cityCodes.join(","));
+        setWeatherData(result);
+      }
+      fetchData();
+    }
+  }, [cityCodes]);
+
+  return <div className="App"></div>;
 }
 
 export default App;
