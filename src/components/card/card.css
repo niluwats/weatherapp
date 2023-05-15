@@ -11,21 +11,19 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
+    height: 200px;
 }
 
 .lower {
     padding: 5%;
     background-color: #383b47;
+    border-radius: 0 0 8px 8px;
 }
 
 .description {
     font-size: larger;
     font-weight: bolder;
     text-transform: capitalize;
-}
-
-.p1 {
-    font-weight: bold;
 }
 
 .separator-left {

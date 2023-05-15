@@ -1,6 +1,7 @@
 .App {
   background-image: url('./assets/bg.png');
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-color: #1e2027;
   font-family: 'Open Sans', sans-serif;
 }
