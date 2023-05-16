@@ -12,7 +12,7 @@ export default function Dashboard(props) {
       <AddCity />
       <div className="grid-container">
         {weatherData.map((item, key) => (
-          <div onClick={() => navigate(`view/${key}`)}>
+          <div key={item.id} onClick={() => navigate(`view/${key}`)}>
             <Card data={item} id={key} />
           </div>
         ))}

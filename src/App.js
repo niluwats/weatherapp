@@ -6,6 +6,7 @@ import Header from "./components/header/header";
 import { Route, Routes } from "react-router";
 import Dashboard from "./pages/dashboard/dashboard";
 import View from "./pages/view/view";
+import Footer from "./components/footer/footer";
 
 function App() {
   const [cityCodes, setCityCodes] = useState([]);
@@ -34,8 +35,9 @@ function App() {
           <Route
             path="/view/:id"
             element={<View weatherData={weatherData} />}
-          ></Route>
+          />
         </Routes>
+        <Footer />
       </div>
     )
   );
