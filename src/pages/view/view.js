@@ -1,6 +1,10 @@
+import ViewCard from "../../components/viewCard/viewCard";
 import "./view.css";
-import "../../App.css";
 
-export default function View() {
-  return <div className="App"></div>;
+export default function View(props) {
+  return (
+    <div className="view_container">
+      <ViewCard data={props.weatherData} />
+    </div>
+  );
 }

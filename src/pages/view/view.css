@@ -1,0 +1,5 @@
+.view_container {
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+}
