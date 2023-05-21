@@ -32,31 +32,31 @@ export default function Card(props) {
       style={{ backgroundColor: colors[id % colors.length] }}
     >
       <div className="upper">
-        <div className="row">
-          <div className="col">
+        <div className="row justify-content-evenly">
+          <div className="col-sm-4 col-md-6 col-lg-6">
             <h3>
               {city}, {country}
             </h3>
             <p>{formatFullDate(timestamp)}</p>
           </div>
-          <div className="col">
+          <div className="col-sm-4 col-md-6 col-lg-6">
             <h1>{temperature}&deg;c</h1>
           </div>
         </div>
-        <div className="row align-items-end">
-          <div className="col">
+        <div className="row justify-content-evenly">
+          <div className="col-sm-4 col-md-6 col-lg-6">
             <img src={src} alt="description-icon" />
             <span className="description">{description}</span>
           </div>
-          <div className="col">
+          <div className="col-sm-4 col-md-6 col-lg-6">
             <h6>Temp Min: {min_temp}&deg;c</h6>
             <h6>Temp Max: {max_temp}&deg;c</h6>
           </div>
         </div>
       </div>
       <div className="lower">
-        <div className="row align-items-center">
-          <div className="col text-start">
+        <div className="row align-items-center justify-content-evenly">
+          <div className="col-12 col-sm-3 col-md-2 col-lg-3 lower_col1">
             <h6>
               <b>Pressure:</b> {pressure}hPa
             </h6>
@@ -68,19 +68,22 @@ export default function Card(props) {
             </h6>
           </div>
 
-          <div className="col text-center">
+          <div className="col-sm-3 col-md-3 col-lg-3">
             <div className="separator-left"></div>
           </div>
-          <div className="col" style={{ margin: "-25%" }}>
+          <div
+            className="col-12 col-sm-3 col-md-3 col-lg-3"
+            style={{ margin: "-25%" }}
+          >
             <img src={arrowIcon} alt="arrow-icon" />
             <h6>
               {wind}m/s {deg} <b>Degree</b>
             </h6>
           </div>
-          <div className="col text-center">
+          <div className="col-sm-3 col-md-3 col-lg-3">
             <div className="separator-right"></div>
           </div>
-          <div className="col text-end">
+          <div className="col-12 col-sm-3 col-md-3 col-lg-3 lower_col3">
             <h6>
               <b>Sunrise:</b> {formatDate(sunrise)}
             </h6>

@@ -37,7 +37,7 @@ export default function ViewCard(props) {
         <button className="btn card_btn" onClick={() => navigate("/")}></button>
       </div>
       <div className="upper_container">
-        <div className="row">
+        <div className="row justify-content-evenly">
           <div className="col">
             <h3>
               {city}, {country}
@@ -47,14 +47,14 @@ export default function ViewCard(props) {
         <div className="row">
           <p>{formatFullDate(timestamp)}</p>
         </div>
-        <div className="d-flex justify-content-evenly align-items-center upper_2">
+        <div className="align-items-center upper_2">
           <div>
             <img src={src} alt="description-icon" />
             <br></br>
             <br></br>
             <h5 className="desc">{description}</h5>
           </div>
-          <div>
+          <div className="separator_container">
             <div className="separator" style={{ borderColor: "white" }}></div>
           </div>
           <div>
@@ -67,7 +67,7 @@ export default function ViewCard(props) {
         </div>
       </div>
       <div className="lower_container">
-        <div className="text-start">
+        <div className="lower1">
           <h6>
             <b>Pressure:</b> {pressure}hPa
           </h6>
@@ -78,7 +78,7 @@ export default function ViewCard(props) {
             <b>Visibility:</b> {visibility / 1000}km
           </h6>
         </div>
-        <div>
+        <div className="separator_container">
           <div className="separator"></div>
         </div>
         <div className="text-center">
@@ -87,10 +87,10 @@ export default function ViewCard(props) {
             {wind}m/s {deg} <b>Degree</b>
           </h6>
         </div>
-        <div>
+        <div className="separator_container">
           <div className="separator"></div>
         </div>
-        <div className="text-end">
+        <div className="lower3">
           <h6>
             <b>Sunrise:</b> {formatDate(sunrise)}
           </h6>

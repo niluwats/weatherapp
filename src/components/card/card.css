@@ -1,7 +1,6 @@
 .card_outer {
     width: 600px;
-    align-items: center;
-    border-radius: 8px;
+    border-radius: 10px;
     color: white;
 }
 
@@ -11,14 +10,24 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
-    height: 200px;
+    height: 220px;
+    display: grid;
+    align-items: center;
 }
 
 .lower {
-    padding: 5%;
     background-color: #383b47;
-    border-radius: 0 0 8px 8px;
-    height: 130px;
+    border-radius: 0 0 10px 10px;
+    height: 150px;
+    display: grid;
+}
+
+.lower_col1 {
+    text-align: start;
+}
+
+.lower_col3 {
+    text-align: end;
 }
 
 .description {
@@ -35,4 +44,67 @@
 .separator-right {
     border-right: 1px solid gray;
     height: 60px;
+}
+
+
+@media (max-width:700px) {
+    .card_outer {
+        width: 400px;
+    }
+
+    .upper {
+        height: 300px;
+        background-position: center;
+    }
+
+    .lower {
+        height: 300px;
+    }
+}
+
+@media (max-width:576px) {
+    .card_outer {
+        width: 400px;
+    }
+}
+
+
+@media (max-width:600px) {
+    .card_outer {
+        width: 300px;
+    }
+
+    .upper {
+        height: 300px;
+        background-position: center;
+    }
+
+    .lower {
+        height: 200px;
+    }
+
+    .separator-left {
+        visibility: hidden;
+        text-align: center;
+    }
+
+    .separator-right {
+        visibility: hidden;
+        text-align: center;
+
+    }
+
+    .lower {
+        height: 300px;
+        padding: 10%;
+
+    }
+
+    .lower_col1 {
+        text-align: center;
+    }
+
+    .lower_col3 {
+        text-align: center;
+    }
 }

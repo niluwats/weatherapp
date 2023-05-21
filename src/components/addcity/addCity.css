@@ -5,7 +5,7 @@
 }
 
 input {
-    width: 400px;
+    width: 300px;
     border-radius: 10px;
     border: none;
     background-color: #1f2128;
@@ -13,6 +13,13 @@ input {
 }
 
 button {
-    height: 50px;
-    width: 100px;
+    padding: 2%;
+}
+
+@media (max-width:500px) {
+    .outer {
+        padding: 10%;
+        margin-left: 23%;
+        width: 200px;
+    }
 }
