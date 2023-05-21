@@ -1,5 +1,12 @@
 .headerOuter {
-    padding-top: 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #213d7b;
+    padding: 2%;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
 }
 
 .header {
@@ -7,6 +14,7 @@
     align-items: center;
     align-content: center;
     justify-content: center;
+    width: 500px
 }
 
 .appTitle {
