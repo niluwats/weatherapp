@@ -1,26 +1,28 @@
-export const key = "weatherdata";
+import json from "../assets/expiration.json";
 
 export function cacheData(data) {
-  const cachedData = {
-    data,
-    timestamp: new Date().getTime(),
-  };
+  const cachedData = {};
 
-  localStorage.setItem(key, JSON.stringify(cachedData));
+  data.forEach((element) => {
+    cachedData.data = element;
+    cachedData.timestamp = new Date().getTime();
+
+    sessionStorage.setItem(element.id, JSON.stringify(cachedData));
+  });
 }
 
-export function getCachedData() {
-  const cachedItem = localStorage.getItem(key);
+export function getCachedData(key) {
+  const cachedItem = sessionStorage.getItem(key);
 
   if (cachedItem) {
     const { data, timestamp } = JSON.parse(cachedItem);
     const currTime = new Date().getTime();
-    const timeDiff = Math.floor(currTime - timestamp / 60000);
+    const timeDiff = Math.floor((currTime - timestamp) / 60000);
 
-    if (timeDiff <= 5) {
+    if (timeDiff <= json[key]) {
       return data;
     } else {
-      delete localStorage.removeItem(key);
+      delete sessionStorage.removeItem(key);
     }
   }
   return null;

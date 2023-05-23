@@ -18,11 +18,7 @@ function App() {
 
   useEffect(() => {
     if (cityCodes.length > 0) {
-      async function fetchData() {
-        const result = await getWeatherInfo(cityCodes.join(","));
-        setWeatherData(result);
-      }
-      fetchData();
+      getWeatherInfo(cityCodes).then((data) => setWeatherData(data));
     }
   }, [cityCodes]);
 

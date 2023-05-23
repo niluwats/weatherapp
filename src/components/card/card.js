@@ -5,23 +5,25 @@ import colorsJson from "../../assets/colors.json";
 
 export default function Card(props) {
   const {
-    timestamp,
-    city,
-    country,
-    temperature,
-    max_temp,
-    min_temp,
-    sunrise,
-    sunset,
-    humidity,
-    pressure,
-    visibility,
-    wind,
-    deg,
-    description,
-    icon,
-  } = props.data;
-  const id = props.id;
+    id,
+    data: {
+      timestamp,
+      city,
+      country,
+      temperature,
+      max_temp,
+      min_temp,
+      sunrise,
+      sunset,
+      humidity,
+      pressure,
+      visibility,
+      wind,
+      deg,
+      description,
+      icon,
+    },
+  } = props;
 
   const src = `http://openweathermap.org/img/w/${icon}.png`;
   const colors = colorsJson.colours.map((color) => color);
