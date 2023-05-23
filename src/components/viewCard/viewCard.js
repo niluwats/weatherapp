@@ -26,7 +26,7 @@ export default function ViewCard(props) {
     icon,
   } = props.data[id];
   const src = `http://openweathermap.org/img/w/${icon}.png`;
-  const colors = colorsJson.colours.map((clr) => clr);
+  const colors = colorsJson.colours;
 
   return (
     <div
