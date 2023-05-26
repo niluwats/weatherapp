@@ -18,6 +18,17 @@
 }
 
 .appTitle {
+    font-size: xx-large;
     padding-left: 2%;
     color: white;
+}
+
+@media (max-width:576px) {
+    .appTitle {
+        font-size: x-large;
+    }
+
+    .weather_icon {
+        width: 50px;
+    }
 }

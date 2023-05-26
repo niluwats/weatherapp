@@ -1,5 +1,5 @@
 .card_outer {
-    width: 600px;
+    width: 650px;
     border-radius: 10px;
     color: white;
 }
@@ -30,8 +30,20 @@
     text-align: end;
 }
 
+p {
+    margin: 0;
+}
+
+.p-city {
+    font-size: x-large;
+}
+
+.p-temperature {
+    font-size: xx-large;
+}
+
 .description {
-    font-size: larger;
+    font-size: medium;
     font-weight: bolder;
     text-transform: capitalize;
 }
@@ -46,30 +58,73 @@
     height: 60px;
 }
 
-
-@media (max-width:700px) {
+@media (max-width:950px) {
     .card_outer {
-        width: 400px;
+        width: 500px;
     }
 
     .upper {
-        height: 300px;
+        padding: 3%;
+    }
+
+    p {
+        font-size: smaller;
+    }
+
+    .p-city {
+        font-size: larger;
+    }
+
+    .p-temperature {
+        font-size: x-large;
+    }
+
+    .description {
+        font-size: small;
+    }
+
+    .windIcon {
+        width: 20%;
+    }
+}
+
+
+@media (max-width:700px) {
+    .card_outer {
+        width: 430px;
+    }
+
+    .upper {
+        padding: 2%;
         background-position: center;
     }
 
+    p {
+        font-size: x-small;
+    }
+
+    .p-city {
+        font-size: large;
+    }
+
+    .p-temperature {
+        font-size: larger;
+    }
+
+    .description {
+        font-size: smaller;
+    }
+
     .lower {
-        height: 300px;
+        height: 100px;
+    }
+
+    .windIcon {
+        width: 20%;
     }
 }
 
-@media (max-width:576px) {
-    .card_outer {
-        width: 400px;
-    }
-}
-
-
-@media (max-width:600px) {
+/* @media (max-width:600px) {
     .card_outer {
         width: 300px;
     }
@@ -91,7 +146,6 @@
     .separator-right {
         visibility: hidden;
         text-align: center;
-
     }
 
     .lower {
@@ -106,5 +160,35 @@
 
     .lower_col3 {
         text-align: center;
+    }
+} */
+
+@media (max-width:576px) {
+    .card_outer {
+        width: 300px;
+    }
+
+    .upper {
+        padding: 1%
+    }
+
+    .lower {
+        height: 120px;
+    }
+
+    p {
+        font-size: xx-small;
+    }
+
+    .p-city {
+        font-size: medium;
+    }
+
+    .p-temperature {
+        font-size: large;
+    }
+
+    .description {
+        font-size: smaller;
     }
 }

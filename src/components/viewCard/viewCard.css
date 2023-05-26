@@ -36,6 +36,7 @@
 
 .desc {
     text-transform: capitalize;
+    font-size: medium;
 }
 
 .separator {
@@ -61,6 +62,18 @@
     outline: none !important;
 }
 
+
+@media (max-width:950px) {
+    .upper_container {
+        height: 200px;
+    }
+
+    .upper_2 {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
 @media (max-width:900px) {
     .separator_container {
         visibility: hidden;
@@ -83,7 +96,7 @@
 
     .lower_container {
         display: grid;
-        height: 350px;
+        height: 250px;
         text-align: center;
     }
 

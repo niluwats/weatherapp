@@ -39,9 +39,9 @@ export default function ViewCard(props) {
       <div className="upper_container">
         <div className="row justify-content-evenly">
           <div className="col">
-            <h3>
+            <p className="p-city">
               {city}, {country}
-            </h3>
+            </p>
           </div>
         </div>
         <div className="row">
@@ -52,51 +52,51 @@ export default function ViewCard(props) {
             <img src={src} alt="description-icon" />
             <br></br>
             <br></br>
-            <h5 className="desc">{description}</h5>
+            <p className="desc">{description}</p>
           </div>
           <div className="separator_container">
             <div className="separator" style={{ borderColor: "white" }}></div>
           </div>
           <div>
-            <h1>{temperature}&deg;c</h1>
+            <p className="p-temperature">{temperature}&deg;c</p>
             <br></br>
             <br></br>
-            <h6>Temp Min: {min_temp}&deg;c</h6>
-            <h6>Temp Max: {max_temp}&deg;c</h6>
+            <p>Temp Min: {min_temp}&deg;c</p>
+            <p>Temp Max: {max_temp}&deg;c</p>
           </div>
         </div>
       </div>
       <div className="lower_container">
         <div className="lower1">
-          <h6>
+          <p>
             <b>Pressure:</b> {pressure}hPa
-          </h6>
-          <h6>
+          </p>
+          <p>
             <b>Humidity:</b> {humidity}%
-          </h6>
-          <h6>
+          </p>
+          <p>
             <b>Visibility:</b> {visibility / 1000}km
-          </h6>
+          </p>
         </div>
         <div className="separator_container">
           <div className="separator"></div>
         </div>
         <div className="text-center">
-          <img src={arrowIcon} alt="arrow-icon" />
-          <h6>
+          <img className="windIcon" src={arrowIcon} alt="arrow-icon" />
+          <p>
             {wind}m/s {deg} <b>Degree</b>
-          </h6>
+          </p>
         </div>
         <div className="separator_container">
           <div className="separator"></div>
         </div>
         <div className="lower3">
-          <h6>
+          <p>
             <b>Sunrise:</b> {formatDate(sunrise)}
-          </h6>
-          <h6>
+          </p>
+          <p>
             <b>Sunset:</b> {formatDate(sunset)}
-          </h6>
+          </p>
         </div>
       </div>
     </div>
