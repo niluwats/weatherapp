@@ -5,8 +5,8 @@ export default function Header() {
   return (
     <header className="headerOuter">
       <div className="header">
-        <img alt="weather-icon" src={icon} />
-        <h2 className="appTitle font-weight-bold">Weather App</h2>
+        <img className="weather_icon" alt="weather-icon" src={icon} />
+        <p className="appTitle font-weight-bold">Weather App</p>
       </div>
     </header>
   );

@@ -35,63 +35,63 @@ export default function Card(props) {
     >
       <div className="upper">
         <div className="row justify-content-evenly">
-          <div className="col-sm-4 col-md-6 col-lg-6">
-            <h3>
+          <div className="col-5 col-sm-4 col-md-6 col-lg-6">
+            <p className="p-city">
               {city}, {country}
-            </h3>
+            </p>
             <p>{formatFullDate(timestamp)}</p>
           </div>
-          <div className="col-sm-4 col-md-6 col-lg-6">
-            <h1>{temperature}&deg;c</h1>
+          <div className="col-5 col-sm-4 col-md-6 col-lg-6">
+            <p className="p-temperature">{temperature}&deg;c</p>
           </div>
         </div>
         <div className="row justify-content-evenly">
-          <div className="col-sm-4 col-md-6 col-lg-6">
+          <div className="col-5 col-sm-4 col-md-6 col-lg-6">
             <img src={src} alt="description-icon" />
             <span className="description">{description}</span>
           </div>
-          <div className="col-sm-4 col-md-6 col-lg-6">
-            <h6>Temp Min: {min_temp}&deg;c</h6>
-            <h6>Temp Max: {max_temp}&deg;c</h6>
+          <div className="col-5 col-sm-4 col-md-6 col-lg-6">
+            <p>Temp Min: {min_temp}&deg;c</p>
+            <p>Temp Max: {max_temp}&deg;c</p>
           </div>
         </div>
       </div>
       <div className="lower">
         <div className="row align-items-center justify-content-evenly">
-          <div className="col-12 col-sm-3 col-md-2 col-lg-3 lower_col1">
-            <h6>
+          <div className="col-3 col-sm-3 col-md-3 col-lg-3 lower_col1">
+            <p>
               <b>Pressure:</b> {pressure}hPa
-            </h6>
-            <h6>
+            </p>
+            <p>
               <b>Humidity:</b> {humidity}%
-            </h6>
-            <h6>
+            </p>
+            <p>
               <b>Visibility:</b> {visibility / 1000}km
-            </h6>
+            </p>
           </div>
 
-          <div className="col-sm-3 col-md-3 col-lg-3">
+          <div className="col-3 col-sm-3 col-md-3 col-lg-3">
             <div className="separator-left"></div>
           </div>
           <div
-            className="col-12 col-sm-3 col-md-3 col-lg-3"
+            className="col-3 col-sm-3 col-md-3 col-lg-3"
             style={{ margin: "-25%" }}
           >
-            <img src={arrowIcon} alt="arrow-icon" />
-            <h6>
+            <img src={arrowIcon} alt="arrow-icon" className="windIcon" />
+            <p>
               {wind}m/s {deg} <b>Degree</b>
-            </h6>
+            </p>
           </div>
-          <div className="col-sm-3 col-md-3 col-lg-3">
+          <div className="col-3 col-sm-3 col-md-3 col-lg-3">
             <div className="separator-right"></div>
           </div>
-          <div className="col-12 col-sm-3 col-md-3 col-lg-3 lower_col3">
-            <h6>
+          <div className="col-3 col-sm-3 col-md-3 col-lg-3 lower_col3">
+            <p>
               <b>Sunrise:</b> {formatDate(sunrise)}
-            </h6>
-            <h6>
+            </p>
+            <p>
               <b>Sunset:</b> {formatDate(sunset)}
-            </h6>
+            </p>
           </div>
         </div>
       </div>

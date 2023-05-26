@@ -12,10 +12,6 @@ input {
     color: white;
 }
 
-button {
-    padding: 2%;
-}
-
 @media (max-width:500px) {
     .outer {
         padding: 10%;
